@@ -32,22 +32,22 @@ A container image was then built and pushed on my personal dockerhub repository,
 
 ### Running the setup
 - Start the local cluster using
-'''
+```
 minikube start
 '''
 - At this point we should have one active node, we could check this using
-'''
+```
 kubectl get nodes
-'''
+```
 - Once the cluster is up and running, we should start deploying our app. Yet, first we need to establish our persistant volume and bind them to claims. We can do that by running the following
-'''
+```
 kubectl create -f <name-of-volume-file>
-'''
+```
 - Once we created all persistant volumes and bound them to a claim, we can now finally start deploying our app onto pods.
-'''
+```
 kubectl create -f <name-of-deployment-file>
-'''
+```
 - We can check that our app is deployed sucessfully using
-'''
+```
 kubectl get pods
-'''
+```
