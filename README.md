@@ -53,3 +53,16 @@ kubectl get pods
 ```
 we should see something of this sort 
 ![alt text](screenshots/deployment_1.png "redis and postgres sucessfully deployed")
+
+- We can then run of service files using
+```
+kubectl create -f <name-of-service-file>
+```
+- By running
+```
+kubectl create -f drkiq-service.yaml
+```
+we are essentially exposing the drkiq deployment
+
+- use the external ip of the app, alongside the node and nodeport value to access and test that the app is up and running on a kubernetes cluster.
+
