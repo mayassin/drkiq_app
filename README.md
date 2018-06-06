@@ -34,7 +34,7 @@ A container image was then built and pushed on my personal dockerhub repository,
 - Start the local cluster using
 ```
 minikube start
-'''
+```
 - At this point we should have one active node, we could check this using
 ```
 kubectl get nodes
