@@ -51,3 +51,5 @@ kubectl create -f <name-of-deployment-file>
 ```
 kubectl get pods
 ```
+we should see something of this sort 
+![alt text](screenshots/deployment_1.png "redis and postgres sucessfully deployed")
