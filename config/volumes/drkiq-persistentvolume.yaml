@@ -1,0 +1,14 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: task-pv-volume-1
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 400Mi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/drkiq"
