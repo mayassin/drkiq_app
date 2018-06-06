@@ -9,11 +9,12 @@ A container image was then built and pushed on my personal dockerhub repository,
 ### Tools
 - [Minikube](https://github.com/kubernetes/minikube) was used to build a local cluster with one active node.
 - [Kubectl](https://kubernetes.io/docs/reference/kubectl/overview), a kubernetes command-line-tool for managing and deploying applications.
-- [Kompose](https://github.com/kubernetes/kompose) was used to build a basic skeleton for the kubernetes config files such as deployment and service files.
+- [Kompose](https://github.com/kubernetes/kompose) was used to build a basic skeleton for the kubernetes config files such as deployment and service files. 
 - [Kube-spwan](https://github.com/kinvolk/kube-spawn) was initially used to build a local multi-node cluster as it supports a loadbalancer service as opposed to minikube which currently has no support for such services. Kube-spwan was later removed from the project setup as it added unnecessary overhead with no clear optimization.
 
 ### Set-up
 - A one node cluster was initially setup on the local host machine.
+- Kompose was merely used as an automated way to create a basic kubernetes config file using a docker-compose file. Hence, Kompose only provided a skeleton for each config file, data such volume hostpath, ports, namespaces amongst many others were heavily modified from the original kompose output file.
 - All relevant deployment, service and volume config files needed by kubernetes are placed under their respective names in the folder config, i.e for deployments files the path is ./config/deployments/.. etc.
 - The kubenetes config currently in place is under a loosely coupled and highly cohesive desgin, where each micro-service has its own deployment, service, persistent voulme and persistent volume claims file.
 
